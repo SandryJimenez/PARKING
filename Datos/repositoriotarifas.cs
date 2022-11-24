@@ -39,12 +39,12 @@ namespace Datos
         {
             try
             {
-                string _sql = string.Format("select * from Tipos_vehiculos where id='{0}'", id);
+                string _sql = string.Format("select * from Tipos_vehiculos where tipo='{0}'", id);
                 var cmd = new SqlCommand(_sql, conexion);
                 AbrirConnexion();
                 var reader = cmd.ExecuteReader();
                 reader.Read();
-                var vehiculo = new Tarifas(reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
+                var vehiculo = new Tarifas(reader.GetInt32(0), reader.GetString(1),reader.GetString(2));
                 CerrarConnexion();
                 return vehiculo;
             }

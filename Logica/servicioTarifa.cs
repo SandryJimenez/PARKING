@@ -63,6 +63,21 @@ namespace LogicaS
                 return "tarifa eliminada";
             }
         }
+
+        public Responce Buscarporid(string id)
+        {
+            try
+            {
+                return new Responce(repositoriotarifas.Buscartipo(id));
+            }
+            catch (Exception exception)
+            {
+                return new Responce("Se presentó el siguiente error:" + exception.Message);
+            }
+        }
+
+
+
         public string Actualizar(Tarifas tarifa)
         {
             Tarifas tarifas = Buscar(id);

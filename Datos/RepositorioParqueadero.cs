@@ -40,9 +40,9 @@ namespace Datos
             alquiler.Marca = (string)fila[3];         
             alquiler.modelo = (string)fila[4];
             alquiler.color = (string)fila[5];
-            alquiler.fechallegada = Convert.ToDateTime( (string)fila[6]);
-            alquiler.valorPorHora = (int)fila[7];
-            alquiler.FechaSalida = Convert.ToDateTime((string)fila[8]);     
+            alquiler.fechallegada = (DateTime)fila[6]; 
+            alquiler.FechaSalida = (DateTime)fila[7];
+            alquiler.valorPorHora = (int)fila[8];
             alquiler.Total = Convert.ToDouble((string)fila[9]);
             return alquiler;
         }
@@ -54,7 +54,7 @@ namespace Datos
                 string _sql = string.Format("INSERT INTO[dbo].[Parqueadero] VALUES('" +parqueaderos.IdParqueadero + "','" +
                     parqueaderos.cedula + "','" + parqueaderos.PlacaVehiculo + "','" + 
                     parqueaderos.Marca + "','" + parqueaderos.modelo + "','" + parqueaderos.color + "','" + 
-                    parqueaderos.fechallegada + "','" + parqueaderos.valorPorHora + "','" + parqueaderos.FechaSalida + "','" + parqueaderos.Total + "')"); 
+                    parqueaderos.fechallegada +  "','" + parqueaderos.FechaSalida + "','" + parqueaderos.valorPorHora + "','" + + parqueaderos.Total + "')"); 
                 var cmd = new SqlCommand(_sql, conexion);
                 AbrirConnexion();
                 int filas = cmd.ExecuteNonQuery();
@@ -76,7 +76,7 @@ namespace Datos
 
         public DataTable Tipovehiculo()
         {
-            SqlDataAdapter dt = new SqlDataAdapter("PR_TIPOVEHICULO", conexion);
+            SqlDataAdapter dt = new SqlDataAdapter("cargarvehiculo", conexion);
             dt.SelectCommand.CommandType = CommandType.StoredProcedure;
             DataTable tabla = new DataTable();
             dt.Fill(tabla);

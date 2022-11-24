@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Presentacion.Reportes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -87,6 +88,19 @@ namespace Presentacion
 
         #endregion
 
+        private void btnTarifa_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new FrmTarifas());
+            hiddenDiseño();
+        }
+        FrmConsultarFacturas factura = new FrmConsultarFacturas();
+
+        private void btnReportetotal_Click(object sender, EventArgs e)
+        {
+            Reportes.Frm_rep_parqueadero orPt1 = new Reportes.Frm_rep_parqueadero();
+            orPt1.Text = factura.Text;
+            orPt1.ShowDialog();
+        }
     }
 }
 

@@ -14,7 +14,10 @@ namespace Logica
         public List<Cliente> Clientes { get; set; }
         public List<Parqueadero> Alquilers { get; set; }
         public Vehiculo Vehiculo { get; set; }
+        public Tarifas Tarifa { get; set; }
+
         public List<Vehiculo> Vehiculos { get; set; }
+        public List<Tarifas> Tarifas { get; set; }
         public Responce(Cliente cliente)
         {
             Cliente = cliente;
@@ -34,7 +37,23 @@ namespace Logica
         {
             Vehiculo = vehiculo;
             Error = false;
+
         }
+        #region
+        public Responce(Tarifas tarifas)
+        {
+            Tarifa = tarifas;
+            Error = false;
+        }
+
+        public Responce(List<Tarifas> tarifa)
+        {
+            Tarifas = tarifa;
+            Error = false;
+        }
+
+        #endregion;
+
         public Responce(List<Vehiculo> vehiculos)
         {
             Vehiculos = vehiculos;

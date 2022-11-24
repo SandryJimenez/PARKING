@@ -31,7 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaginaPrincipal));
             this.panel_lateral = new System.Windows.Forms.Panel();
             this.submenuOpciones = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnReportetotal = new System.Windows.Forms.Button();
+            this.btnTarifa = new System.Windows.Forms.Button();
             this.btnconsultar = new System.Windows.Forms.Button();
             this.btnParqueadero = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -63,7 +65,9 @@
             // submenuOpciones
             // 
             this.submenuOpciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.submenuOpciones.Controls.Add(this.button7);
+            this.submenuOpciones.Controls.Add(this.button2);
+            this.submenuOpciones.Controls.Add(this.btnReportetotal);
+            this.submenuOpciones.Controls.Add(this.btnTarifa);
             this.submenuOpciones.Controls.Add(this.btnconsultar);
             this.submenuOpciones.Controls.Add(this.btnParqueadero);
             this.submenuOpciones.Controls.Add(this.button3);
@@ -71,24 +75,57 @@
             this.submenuOpciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.submenuOpciones.Location = new System.Drawing.Point(0, 145);
             this.submenuOpciones.Name = "submenuOpciones";
-            this.submenuOpciones.Size = new System.Drawing.Size(210, 217);
+            this.submenuOpciones.Size = new System.Drawing.Size(210, 276);
             this.submenuOpciones.TabIndex = 2;
             // 
-            // button7
+            // button2
             // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.LightGray;
-            this.button7.Location = new System.Drawing.Point(0, 160);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(210, 40);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "SALIR";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = true;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.DarkGray;
+            this.button2.Location = new System.Drawing.Point(0, 240);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(210, 40);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "SALIR";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btnReportetotal
+            // 
+            this.btnReportetotal.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportetotal.FlatAppearance.BorderSize = 0;
+            this.btnReportetotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportetotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportetotal.ForeColor = System.Drawing.Color.LightGray;
+            this.btnReportetotal.Location = new System.Drawing.Point(0, 200);
+            this.btnReportetotal.Name = "btnReportetotal";
+            this.btnReportetotal.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnReportetotal.Size = new System.Drawing.Size(210, 40);
+            this.btnReportetotal.TabIndex = 8;
+            this.btnReportetotal.Text = "REPORTE TOTAL";
+            this.btnReportetotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportetotal.UseVisualStyleBackColor = true;
+            this.btnReportetotal.Click += new System.EventHandler(this.btnReportetotal_Click);
+            // 
+            // btnTarifa
+            // 
+            this.btnTarifa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTarifa.FlatAppearance.BorderSize = 0;
+            this.btnTarifa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTarifa.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnTarifa.Location = new System.Drawing.Point(0, 160);
+            this.btnTarifa.Name = "btnTarifa";
+            this.btnTarifa.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnTarifa.Size = new System.Drawing.Size(210, 40);
+            this.btnTarifa.TabIndex = 7;
+            this.btnTarifa.Text = "TARIFAS";
+            this.btnTarifa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTarifa.UseVisualStyleBackColor = true;
+            this.btnTarifa.Click += new System.EventHandler(this.btnTarifa_Click);
             // 
             // btnconsultar
             // 
@@ -231,7 +268,6 @@
 
         private System.Windows.Forms.Panel panel_lateral;
         private System.Windows.Forms.Panel submenuOpciones;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnconsultar;
         private System.Windows.Forms.Button btnParqueadero;
         private System.Windows.Forms.Button button3;
@@ -241,5 +277,8 @@
         private System.Windows.Forms.Panel paneldow;
         private System.Windows.Forms.Panel paneleshijos;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnReportetotal;
+        private System.Windows.Forms.Button btnTarifa;
+        private System.Windows.Forms.Button button2;
     }
 }

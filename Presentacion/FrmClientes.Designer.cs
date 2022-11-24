@@ -52,6 +52,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.txtCondicion = new System.Windows.Forms.TextBox();
             this.grillaClientes = new System.Windows.Forms.DataGridView();
+            this.btnreporte = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -184,15 +185,16 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnreporte);
             this.groupBox1.Controls.Add(this.btnNuevo);
             this.groupBox1.Controls.Add(this.btnActualizar);
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnSalir);
             this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.btnGuardar);
-            this.groupBox1.Location = new System.Drawing.Point(130, 239);
+            this.groupBox1.Location = new System.Drawing.Point(45, 244);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(717, 98);
+            this.groupBox1.Size = new System.Drawing.Size(798, 98);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -232,7 +234,7 @@
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(566, 33);
+            this.btnSalir.Location = new System.Drawing.Point(673, 33);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(101, 38);
             this.btnSalir.TabIndex = 2;
@@ -320,6 +322,17 @@
             this.grillaClientes.TabIndex = 0;
             this.grillaClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaClientes_CellDoubleClick);
             // 
+            // btnreporte
+            // 
+            this.btnreporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnreporte.Location = new System.Drawing.Point(566, 33);
+            this.btnreporte.Name = "btnreporte";
+            this.btnreporte.Size = new System.Drawing.Size(101, 38);
+            this.btnreporte.TabIndex = 4;
+            this.btnreporte.Text = "Reporte";
+            this.btnreporte.UseVisualStyleBackColor = true;
+            this.btnreporte.Click += new System.EventHandler(this.btnreporte_Click);
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,5 +381,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtapellido;
+        private System.Windows.Forms.Button btnreporte;
     }
 }

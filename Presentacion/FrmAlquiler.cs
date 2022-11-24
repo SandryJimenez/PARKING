@@ -1,6 +1,7 @@
 ﻿using Datos;
 using Entidades;
 using Logica;
+using LogicaS;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -10,6 +11,7 @@ namespace Presentacion
 {
     public partial class FrmAlquiler : Form
     {
+        servicioTarifa serviciotarifa;
         servicioCliente servicioCliente;
         servicioVehiculo servicioVehiculo;
         servicioParqueadero servicioAlquiler;
@@ -19,6 +21,7 @@ namespace Presentacion
             servicioCliente = new servicioCliente();
             servicioVehiculo = new servicioVehiculo();
             servicioAlquiler = new servicioParqueadero();
+            serviciotarifa = new servicioTarifa() ;
         }
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
@@ -35,18 +38,13 @@ namespace Presentacion
             cmbtipovehiculo.ValueMember = "id";
         }
 
-        void ver_vehiculo()
+        void ver_vehiculo(Tarifas tar)
         {
-            if (veh == null)
+            if (tar == null)
             {
                 return;
             }
-            txtplaca.Text = veh.PlacaVehiculo;
-            txtcedula.Text = veh.cedula;
-            txtmarca.Text = veh.Marca;
-            txtmodelo.Text = veh.modelo;
-            txtColor.Text = veh.color;
-            fechallegada.Text = Convert.ToString(veh.fechallegada);
+            txtvalorhora.Text = tar.precioxhora;
         }
 
 
@@ -89,8 +87,8 @@ namespace Presentacion
                 modelo = txtmodelo.Text,
                 color = txtColor.Text,
                 fechallegada =fechallegada.Value,
-                valorPorHora =int.Parse( txtvalorhora.Text),
                 FechaSalida = fechasalida.Value,
+                valorPorHora =int.Parse(txtvalorhora.Text),
                 Total = resultado,
             };
             txttotal.Text = parqueo.Total.ToString();
@@ -103,6 +101,17 @@ namespace Presentacion
             string message = servicioAlquiler.Guardar(CrearPago());
 
             MessageBox.Show(message);
+        }
+
+        private void FrmAlquiler_Load(object sender, EventArgs e)
+        {
+            cargar_tipo_vehiculo();
+        }
+
+        private void btnbuscarveh_Click(object sender, EventArgs e)
+        {
+            var respuesta = serviciotarifa.Buscarporid(cmbtipovehiculo.Text);
+            ver_vehiculo(respuesta.Tarifa);
         }
     }
 }

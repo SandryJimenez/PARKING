@@ -242,7 +242,11 @@ namespace Presentacion
             SoloLetras(e);
         }
 
-       
-      
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            Reportes.Frm_rep_vehiculos orPt1 = new Reportes.Frm_rep_vehiculos();
+            orPt1.Text = txtCondicion.Text;
+            orPt1.ShowDialog();
+        }
     }
 }

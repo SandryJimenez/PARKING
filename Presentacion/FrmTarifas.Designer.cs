@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnsalir = new System.Windows.Forms.Button();
+            this.btneliminar = new System.Windows.Forms.Button();
+            this.btnactualizar = new System.Windows.Forms.Button();
+            this.btnguardar = new System.Windows.Forms.Button();
+            this.btnnuevo = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
+            this.btneditar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtbuscartarifa = new System.Windows.Forms.TextBox();
             this.grillatarifas = new System.Windows.Forms.DataGridView();
@@ -37,14 +45,6 @@
             this.cmbtipovehiculo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtprecio = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtcodigo = new System.Windows.Forms.TextBox();
-            this.btnnuevo = new System.Windows.Forms.Button();
-            this.btnguardar = new System.Windows.Forms.Button();
-            this.btnactualizar = new System.Windows.Forms.Button();
-            this.btneliminar = new System.Windows.Forms.Button();
-            this.btnsalir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grillatarifas)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +60,7 @@
             this.groupBox1.Controls.Add(this.btnnuevo);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtcodigo);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btneditar);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtbuscartarifa);
             this.groupBox1.Controls.Add(this.grillatarifas);
@@ -69,11 +69,109 @@
             this.groupBox1.Controls.Add(this.cmbtipovehiculo);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtprecio);
-            this.groupBox1.Location = new System.Drawing.Point(2, 4);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(821, 522);
+            this.groupBox1.Size = new System.Drawing.Size(824, 528);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // btnsalir
+            // 
+            this.btnsalir.BackColor = System.Drawing.Color.DarkViolet;
+            this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsalir.ForeColor = System.Drawing.Color.White;
+            this.btnsalir.Location = new System.Drawing.Point(558, 192);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(88, 33);
+            this.btnsalir.TabIndex = 18;
+            this.btnsalir.Text = "Salir";
+            this.btnsalir.UseVisualStyleBackColor = false;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            // 
+            // btneliminar
+            // 
+            this.btneliminar.BackColor = System.Drawing.Color.DarkViolet;
+            this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.ForeColor = System.Drawing.Color.White;
+            this.btneliminar.Location = new System.Drawing.Point(464, 192);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(88, 33);
+            this.btneliminar.TabIndex = 17;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.UseVisualStyleBackColor = false;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
+            // 
+            // btnactualizar
+            // 
+            this.btnactualizar.BackColor = System.Drawing.Color.DarkViolet;
+            this.btnactualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar.ForeColor = System.Drawing.Color.White;
+            this.btnactualizar.Location = new System.Drawing.Point(372, 192);
+            this.btnactualizar.Name = "btnactualizar";
+            this.btnactualizar.Size = new System.Drawing.Size(88, 33);
+            this.btnactualizar.TabIndex = 16;
+            this.btnactualizar.Text = "Actualizar";
+            this.btnactualizar.UseVisualStyleBackColor = false;
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
+            // 
+            // btnguardar
+            // 
+            this.btnguardar.BackColor = System.Drawing.Color.DarkViolet;
+            this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnguardar.ForeColor = System.Drawing.Color.White;
+            this.btnguardar.Location = new System.Drawing.Point(278, 192);
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Size = new System.Drawing.Size(88, 33);
+            this.btnguardar.TabIndex = 15;
+            this.btnguardar.Text = "Guardar";
+            this.btnguardar.UseVisualStyleBackColor = false;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
+            // 
+            // btnnuevo
+            // 
+            this.btnnuevo.BackColor = System.Drawing.Color.DarkViolet;
+            this.btnnuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnnuevo.ForeColor = System.Drawing.Color.White;
+            this.btnnuevo.Location = new System.Drawing.Point(184, 192);
+            this.btnnuevo.Name = "btnnuevo";
+            this.btnnuevo.Size = new System.Drawing.Size(88, 33);
+            this.btnnuevo.TabIndex = 14;
+            this.btnnuevo.Text = "Nuevo";
+            this.btnnuevo.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label5.Location = new System.Drawing.Point(261, 66);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 18);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Codigo:";
+            // 
+            // txtcodigo
+            // 
+            this.txtcodigo.BackColor = System.Drawing.Color.Plum;
+            this.txtcodigo.Location = new System.Drawing.Point(334, 66);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(143, 20);
+            this.txtcodigo.TabIndex = 12;
+            // 
+            // btneditar
+            // 
+            this.btneditar.BackColor = System.Drawing.Color.DarkViolet;
+            this.btneditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btneditar.ForeColor = System.Drawing.Color.White;
+            this.btneditar.Location = new System.Drawing.Point(43, 157);
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Size = new System.Drawing.Size(88, 33);
+            this.btneditar.TabIndex = 11;
+            this.btneditar.Text = "Editar";
+            this.btneditar.UseVisualStyleBackColor = false;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // label4
             // 
@@ -82,7 +180,7 @@
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(44, 244);
+            this.label4.Location = new System.Drawing.Point(28, 263);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 18);
             this.label4.TabIndex = 10;
@@ -90,7 +188,7 @@
             // 
             // txtbuscartarifa
             // 
-            this.txtbuscartarifa.Location = new System.Drawing.Point(133, 242);
+            this.txtbuscartarifa.Location = new System.Drawing.Point(117, 261);
             this.txtbuscartarifa.Name = "txtbuscartarifa";
             this.txtbuscartarifa.Size = new System.Drawing.Size(140, 20);
             this.txtbuscartarifa.TabIndex = 9;
@@ -100,9 +198,9 @@
             // 
             this.grillatarifas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.grillatarifas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grillatarifas.Location = new System.Drawing.Point(43, 268);
+            this.grillatarifas.Location = new System.Drawing.Point(27, 287);
             this.grillatarifas.Name = "grillatarifas";
-            this.grillatarifas.Size = new System.Drawing.Size(739, 240);
+            this.grillatarifas.Size = new System.Drawing.Size(339, 198);
             this.grillatarifas.TabIndex = 8;
             this.grillatarifas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillatarifas_CellDoubleClick);
             // 
@@ -173,99 +271,6 @@
             this.txtprecio.Size = new System.Drawing.Size(204, 27);
             this.txtprecio.TabIndex = 2;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(64, 103);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Editar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label5.Location = new System.Drawing.Point(261, 66);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 18);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Codigo:";
-            // 
-            // txtcodigo
-            // 
-            this.txtcodigo.BackColor = System.Drawing.Color.Plum;
-            this.txtcodigo.Location = new System.Drawing.Point(334, 66);
-            this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(143, 20);
-            this.txtcodigo.TabIndex = 12;
-            // 
-            // btnnuevo
-            // 
-            this.btnnuevo.BackColor = System.Drawing.Color.DarkViolet;
-            this.btnnuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnnuevo.ForeColor = System.Drawing.Color.White;
-            this.btnnuevo.Location = new System.Drawing.Point(184, 192);
-            this.btnnuevo.Name = "btnnuevo";
-            this.btnnuevo.Size = new System.Drawing.Size(88, 33);
-            this.btnnuevo.TabIndex = 14;
-            this.btnnuevo.Text = "Nuevo";
-            this.btnnuevo.UseVisualStyleBackColor = false;
-            // 
-            // btnguardar
-            // 
-            this.btnguardar.BackColor = System.Drawing.Color.DarkViolet;
-            this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnguardar.ForeColor = System.Drawing.Color.White;
-            this.btnguardar.Location = new System.Drawing.Point(278, 192);
-            this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(88, 33);
-            this.btnguardar.TabIndex = 15;
-            this.btnguardar.Text = "Guardar";
-            this.btnguardar.UseVisualStyleBackColor = false;
-            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
-            // 
-            // btnactualizar
-            // 
-            this.btnactualizar.BackColor = System.Drawing.Color.DarkViolet;
-            this.btnactualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnactualizar.ForeColor = System.Drawing.Color.White;
-            this.btnactualizar.Location = new System.Drawing.Point(372, 192);
-            this.btnactualizar.Name = "btnactualizar";
-            this.btnactualizar.Size = new System.Drawing.Size(88, 33);
-            this.btnactualizar.TabIndex = 16;
-            this.btnactualizar.Text = "Actualizar";
-            this.btnactualizar.UseVisualStyleBackColor = false;
-            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
-            // 
-            // btneliminar
-            // 
-            this.btneliminar.BackColor = System.Drawing.Color.DarkViolet;
-            this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.ForeColor = System.Drawing.Color.White;
-            this.btneliminar.Location = new System.Drawing.Point(464, 192);
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(88, 33);
-            this.btneliminar.TabIndex = 17;
-            this.btneliminar.Text = "Eliminar";
-            this.btneliminar.UseVisualStyleBackColor = false;
-            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
-            // 
-            // btnsalir
-            // 
-            this.btnsalir.BackColor = System.Drawing.Color.DarkViolet;
-            this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsalir.ForeColor = System.Drawing.Color.White;
-            this.btnsalir.Location = new System.Drawing.Point(558, 192);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(88, 33);
-            this.btnsalir.TabIndex = 18;
-            this.btnsalir.Text = "Salir";
-            this.btnsalir.UseVisualStyleBackColor = false;
-            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
-            // 
             // FrmTarifas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,6 +279,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmTarifas";
             this.Text = "FrmTarifas";
+            this.Load += new System.EventHandler(this.FrmTarifas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grillatarifas)).EndInit();
@@ -292,7 +298,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbtipovehiculo;
         private System.Windows.Forms.TextBox txtprecio;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Button btnsalir;

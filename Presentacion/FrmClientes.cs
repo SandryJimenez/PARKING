@@ -248,6 +248,11 @@ namespace Presentacion
             SoloNumero(e);
         }
 
-  
+        private void btnreporte_Click(object sender, EventArgs e)
+        {
+            Reportes.Frm_repor_clientes orPt1 = new Reportes.Frm_repor_clientes();
+            orPt1.Text = txtCondicion.Text;
+            orPt1.ShowDialog();
+        }
     }
 }

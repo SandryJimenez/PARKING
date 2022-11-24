@@ -31,6 +31,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmbcedula = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.txtmarca = new System.Windows.Forms.TextBox();
             this.txtmodelo = new System.Windows.Forms.TextBox();
             this.datellegada = new System.Windows.Forms.DateTimePicker();
@@ -53,8 +55,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtCondicion = new System.Windows.Forms.TextBox();
             this.grillaVehiculos = new System.Windows.Forms.DataGridView();
-            this.label21 = new System.Windows.Forms.Label();
-            this.cmbcedula = new System.Windows.Forms.ComboBox();
+            this.btnReporte = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -109,6 +110,24 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
+            // cmbcedula
+            // 
+            this.cmbcedula.FormattingEnabled = true;
+            this.cmbcedula.Location = new System.Drawing.Point(114, 33);
+            this.cmbcedula.Name = "cmbcedula";
+            this.cmbcedula.Size = new System.Drawing.Size(121, 21);
+            this.cmbcedula.TabIndex = 24;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(67, 41);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(46, 13);
+            this.label21.TabIndex = 22;
+            this.label21.Text = "Cedula";
+            // 
             // txtmarca
             // 
             this.txtmarca.Location = new System.Drawing.Point(115, 106);
@@ -127,7 +146,7 @@
             // 
             this.datellegada.Location = new System.Drawing.Point(114, 208);
             this.datellegada.Name = "datellegada";
-            this.datellegada.Size = new System.Drawing.Size(200, 20);
+            this.datellegada.Size = new System.Drawing.Size(121, 20);
             this.datellegada.TabIndex = 19;
             // 
             // label6
@@ -221,6 +240,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnReporte);
             this.groupBox1.Controls.Add(this.btnNuevo);
             this.groupBox1.Controls.Add(this.btnActualizar);
             this.groupBox1.Controls.Add(this.btnEliminar);
@@ -229,12 +249,13 @@
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Location = new System.Drawing.Point(70, 287);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(671, 78);
+            this.groupBox1.Size = new System.Drawing.Size(773, 78);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
             // btnNuevo
             // 
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnNuevo.Location = new System.Drawing.Point(9, 19);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(102, 40);
@@ -245,6 +266,7 @@
             // 
             // btnActualizar
             // 
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnActualizar.Location = new System.Drawing.Point(328, 19);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(102, 40);
@@ -255,6 +277,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnEliminar.Location = new System.Drawing.Point(436, 19);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(102, 40);
@@ -265,7 +288,8 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(544, 19);
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnSalir.Location = new System.Drawing.Point(651, 19);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(102, 40);
             this.btnSalir.TabIndex = 2;
@@ -275,6 +299,7 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.Location = new System.Drawing.Point(225, 19);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(102, 40);
@@ -285,6 +310,7 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.Location = new System.Drawing.Point(117, 19);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(102, 40);
@@ -301,7 +327,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(793, 330);
+            this.tabPage2.Size = new System.Drawing.Size(884, 415);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Listado General";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -335,23 +361,16 @@
             this.grillaVehiculos.TabIndex = 0;
             this.grillaVehiculos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaVehiculos_CellDoubleClick);
             // 
-            // label21
+            // btnReporte
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(67, 41);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(46, 13);
-            this.label21.TabIndex = 22;
-            this.label21.Text = "Cedula";
-            // 
-            // cmbcedula
-            // 
-            this.cmbcedula.FormattingEnabled = true;
-            this.cmbcedula.Location = new System.Drawing.Point(114, 33);
-            this.cmbcedula.Name = "cmbcedula";
-            this.cmbcedula.Size = new System.Drawing.Size(121, 21);
-            this.cmbcedula.TabIndex = 24;
+            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnReporte.Location = new System.Drawing.Point(544, 19);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(102, 40);
+            this.btnReporte.TabIndex = 6;
+            this.btnReporte.Text = "Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // FrmVehiculo
             // 
@@ -404,5 +423,6 @@
         private System.Windows.Forms.TextBox txtmarca;
         private System.Windows.Forms.ComboBox cmbcedula;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button btnReporte;
     }
 }

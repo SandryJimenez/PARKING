@@ -45,10 +45,9 @@ namespace Presentacion
         {
             if (grillatarifas.SelectedRows.Count > 0)
             {
-                Operacion = "Editar";
-                txtcodigo.Text = grillatarifas.CurrentRow.Cells["ID"].Value.ToString();
-                cmbtipovehiculo.Text = grillatarifas.CurrentRow.Cells["TIPO"].Value.ToString();
-                txtprecio.Text = grillatarifas.CurrentRow.Cells[3].Value.ToString();
+                txtcodigo.Text = grillatarifas.CurrentRow.Cells[0].Value.ToString();
+                cmbtipovehiculo.Text = grillatarifas.CurrentRow.Cells[1].Value.ToString();
+                txtprecio.Text = grillatarifas.CurrentRow.Cells[2].Value.ToString();
             }
             else
             {
@@ -78,7 +77,7 @@ namespace Presentacion
             }
             txtcodigo.Text = Convert.ToString(tarifa.idvehiculo);
             cmbtipovehiculo.Text = tarifa.tipovehiculo;
-            txtprecio.Text = tarifa.precioxhora;
+            txtprecio.Text =Convert.ToString( tarifa.precioxhora);
         }
 
         private void txtbuscartarifa_TextChanged(object sender, EventArgs e)
@@ -90,7 +89,7 @@ namespace Presentacion
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            var tarifa = new Tarifas(Convert.ToInt32(txtcodigo.Text), cmbtipovehiculo.Text, txtprecio.Text);
+            var tarifa = new Tarifas(Convert.ToInt32(txtcodigo.Text), cmbtipovehiculo.Text,txtprecio.Text);
             Insertar(tarifa);
             this.Listado_ca("%");
         }
@@ -136,6 +135,26 @@ namespace Presentacion
         private void btnsalir_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void FrmTarifas_Load(object sender, EventArgs e)
+        {
+            CargarGrillatarifas("");
+        }
+
+        private void btneditar_Click(object sender, EventArgs e)
+        {
+            if (grillatarifas.SelectedRows.Count > 0)
+            {
+                Operacion = "Insertar";
+                txtcodigo.Text = grillatarifas.CurrentRow.Cells[0].Value.ToString();
+                cmbtipovehiculo.Text = grillatarifas.CurrentRow.Cells[1].Value.ToString();
+                txtprecio.Text = grillatarifas.CurrentRow.Cells[2].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una fila");
+            }
         }
     }
 }

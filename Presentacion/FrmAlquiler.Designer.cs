@@ -50,6 +50,7 @@
             this.fechallegada = new System.Windows.Forms.DateTimePicker();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnbuscarveh = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.txtvalorhora = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -57,7 +58,7 @@
             this.fechasalida = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.txtcodfactura = new System.Windows.Forms.TextBox();
-            this.btnbuscarveh = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -303,6 +304,25 @@
             this.groupBox2.TabIndex = 42;
             this.groupBox2.TabStop = false;
             // 
+            // btnbuscarveh
+            // 
+            this.btnbuscarveh.BackColor = System.Drawing.Color.Transparent;
+            this.btnbuscarveh.FlatAppearance.BorderSize = 0;
+            this.btnbuscarveh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscarveh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbuscarveh.ForeColor = System.Drawing.Color.Black;
+            this.btnbuscarveh.Image = ((System.Drawing.Image)(resources.GetObject("btnbuscarveh.Image")));
+            this.btnbuscarveh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnbuscarveh.Location = new System.Drawing.Point(315, 87);
+            this.btnbuscarveh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnbuscarveh.Name = "btnbuscarveh";
+            this.btnbuscarveh.Size = new System.Drawing.Size(72, 52);
+            this.btnbuscarveh.TabIndex = 38;
+            this.btnbuscarveh.Text = "Buscar";
+            this.btnbuscarveh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnbuscarveh.UseVisualStyleBackColor = false;
+            this.btnbuscarveh.Click += new System.EventHandler(this.btnbuscarveh_Click);
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -368,24 +388,9 @@
             this.txtcodfactura.Size = new System.Drawing.Size(129, 20);
             this.txtcodfactura.TabIndex = 38;
             // 
-            // btnbuscarveh
+            // printDocument1
             // 
-            this.btnbuscarveh.BackColor = System.Drawing.Color.Transparent;
-            this.btnbuscarveh.FlatAppearance.BorderSize = 0;
-            this.btnbuscarveh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbuscarveh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbuscarveh.ForeColor = System.Drawing.Color.Black;
-            this.btnbuscarveh.Image = ((System.Drawing.Image)(resources.GetObject("btnbuscarveh.Image")));
-            this.btnbuscarveh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnbuscarveh.Location = new System.Drawing.Point(315, 87);
-            this.btnbuscarveh.Margin = new System.Windows.Forms.Padding(2);
-            this.btnbuscarveh.Name = "btnbuscarveh";
-            this.btnbuscarveh.Size = new System.Drawing.Size(72, 52);
-            this.btnbuscarveh.TabIndex = 38;
-            this.btnbuscarveh.Text = "Buscar";
-            this.btnbuscarveh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnbuscarveh.UseVisualStyleBackColor = false;
-            this.btnbuscarveh.Click += new System.EventHandler(this.btnbuscarveh_Click);
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.imprimir);
             // 
             // FrmAlquiler
             // 
@@ -444,5 +449,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbtipovehiculo;
         private System.Windows.Forms.Button btnbuscarveh;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

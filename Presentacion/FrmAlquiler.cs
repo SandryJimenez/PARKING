@@ -6,6 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Drawing.Printing;
+using System.Drawing;
+using System.Data;
 
 namespace Presentacion
 {
@@ -101,6 +104,12 @@ namespace Presentacion
             string message = servicioAlquiler.Guardar(CrearPago());
 
             MessageBox.Show(message);
+            //generar ticket factura
+            printDocument1 = new PrintDocument();
+            PrinterSettings ps = new PrinterSettings();
+            printDocument1.PrinterSettings = ps;
+            printDocument1.PrintPage += imprimir;
+            printDocument1.Print();
         }
 
         private void FrmAlquiler_Load(object sender, EventArgs e)
@@ -112,6 +121,29 @@ namespace Presentacion
         {
             var respuesta = serviciotarifa.Buscarporid(cmbtipovehiculo.Text);
             ver_vehiculo(respuesta.Tarifa);
+        }
+
+
+       
+
+
+        private void imprimir(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Font font = new Font("Arial", 14);
+            int ancho = 300;
+            int y = 20;
+
+            e.Graphics.DrawString("------ Ticket de Factura -------", font, Brushes.Black, new RectangleF(0,y+=20,ancho,20));
+            e.Graphics.DrawString("Factura #"+txtcodfactura.Text, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("Cliente: " + txtcedula.Text, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("------ Vehiculo --------: " , font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("Placa:  " + txtplaca.Text, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("Marca:  " + txtmarca.Text, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("------ Total --------: ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("Precio X Hora:  " +"$"+txtvalorhora.Text, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("Total:  " +"$"+ txttotal.Text, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("Gracias Por su Visita", font, Brushes.Black, new RectangleF(0, y += 40, ancho, 20));
+
         }
     }
 }

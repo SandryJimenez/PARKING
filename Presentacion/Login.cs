@@ -65,5 +65,10 @@ namespace Presentacion
         {
             this.Dispose();
         }
+
+        private void txtuser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,18 +30,31 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dS_Reportes = new Presentacion.Reportes.DS_Reportes();
             this.uSPListadoParqueaderoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dS_Reportes = new Presentacion.Reportes.DS_Reportes();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.uSP_Listado_ParqueaderoTableAdapter = new Presentacion.Reportes.DS_ReportesTableAdapters.USP_Listado_ParqueaderoTableAdapter();
             this.txt_p3 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Reportes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPListadoParqueaderoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Reportes)).BeginInit();
             this.SuspendLayout();
+            // 
+            // uSPListadoParqueaderoBindingSource
+            // 
+            this.uSPListadoParqueaderoBindingSource.DataMember = "USP_Listado_Parqueadero";
+            this.uSPListadoParqueaderoBindingSource.DataSource = this.dS_Reportes;
+            // 
+            // dS_Reportes
+            // 
+            this.dS_Reportes.DataSetName = "DS_Reportes";
+            this.dS_Reportes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
+            this.reportViewer1.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.reportViewer1.BackgroundImage = global::Presentacion.Properties.Resources._3;
+            this.reportViewer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.uSPListadoParqueaderoBindingSource;
@@ -52,16 +65,6 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(1048, 455);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // dS_Reportes
-            // 
-            this.dS_Reportes.DataSetName = "DS_Reportes";
-            this.dS_Reportes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // uSPListadoParqueaderoBindingSource
-            // 
-            this.uSPListadoParqueaderoBindingSource.DataMember = "USP_Listado_Parqueadero";
-            this.uSPListadoParqueaderoBindingSource.DataSource = this.dS_Reportes;
             // 
             // uSP_Listado_ParqueaderoTableAdapter
             // 
@@ -90,8 +93,8 @@
             this.Name = "Frm_rep_parqueadero";
             this.Text = "Frm_rep_parqueadero";
             this.Load += new System.EventHandler(this.Frm_rep_parqueadero_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Reportes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPListadoParqueaderoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Reportes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -156,5 +156,10 @@ namespace Presentacion
                 MessageBox.Show("Debe seleccionar una fila");
             }
         }
+
+        private void grillatarifas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

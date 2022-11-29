@@ -74,7 +74,7 @@ namespace Presentacion
 
         private void btnParqueadero_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(new FrmAlquiler());
+            openChildFormInPanel(new FrmParqueadero());
             hiddenDiseño();
 
         }
@@ -100,6 +100,11 @@ namespace Presentacion
             Reportes.Frm_rep_parqueadero orPt1 = new Reportes.Frm_rep_parqueadero();
             orPt1.Text = factura.Text;
             orPt1.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();    
         }
     }
 }

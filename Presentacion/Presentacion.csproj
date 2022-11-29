@@ -96,17 +96,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="form1.cs">
+    <Compile Include="FrmParqueadero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form1.Designer.cs">
-      <DependentUpon>form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmAlquiler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmAlquiler.Designer.cs">
-      <DependentUpon>FrmAlquiler.cs</DependentUpon>
+    <Compile Include="FrmParqueadero.Designer.cs">
+      <DependentUpon>FrmParqueadero.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmClientes.cs">
       <SubType>Form</SubType>
@@ -119,12 +113,6 @@
     </Compile>
     <Compile Include="FrmConsultarFacturas.Designer.cs">
       <DependentUpon>FrmConsultarFacturas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmPrincipal.Designer.cs">
-      <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTarifas.cs">
       <SubType>Form</SubType>
@@ -176,20 +164,14 @@
       <DependentUpon>Frm_rep_vehiculos.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="form1.resx">
-      <DependentUpon>form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmAlquiler.resx">
-      <DependentUpon>FrmAlquiler.cs</DependentUpon>
+    <EmbeddedResource Include="FrmParqueadero.resx">
+      <DependentUpon>FrmParqueadero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConsultarFacturas.resx">
       <DependentUpon>FrmConsultarFacturas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmPrincipal.resx">
-      <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTarifas.resx">
       <DependentUpon>FrmTarifas.cs</DependentUpon>
@@ -299,6 +281,8 @@
     <None Include="Resources\tarifa.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\3.jpg" />
+    <None Include="Resources\logo pAr.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
